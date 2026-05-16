@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estufas</title>
+
     <link rel="stylesheet" href="estufas.css">
 </head>
-
 <body>
 
     <aside class="sidebar">
@@ -17,7 +16,7 @@
                 <ion-icon name="leaf-outline"></ion-icon>
                 Alface Feliz
             </h1>
-            <span>Cultivo Inteligente</span>
+            <span>Cultivo Inteligente</span
         </div>
 
         <nav class="menu">
@@ -25,17 +24,14 @@
                 <ion-icon name="home-outline"></ion-icon>
                 <span>Home</span>
             </a>
-
             <a href="#" class="menu-item active">
                 <ion-icon name="leaf-outline"></ion-icon>
                 <span>Estufas</span>
             </a>
-
             <a href="#" class="menu-item">
                 <ion-icon name="stats-chart-outline"></ion-icon>
                 <span>Dashboard</span>
             </a>
-
             <a href="#" class="menu-item">
                 <ion-icon name="water-outline"></ion-icon>
                 <span>Irrigação</span>
@@ -45,16 +41,25 @@
                 <span>Configurações</span>
             </a>
         </nav>
+
     </aside>
 
     <main class="main-content">
         <header class="topbar">
-            <div class="search-box">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="text" placeholder="Buscar...">
+
+            <div class="page-info">
+                <h2>Estufas</h2>
+                <p>
+                    Gerencie suas estufas inteligentes
+                </p>
             </div>
 
             <div class="topbar-right">
+                <div class="search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Buscar estufa...">
+                </div>
+
                 <button class="notification-button">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </button>
@@ -70,28 +75,59 @@
 
         </header>
 
-        <section class="menu_card">
-            <div class="card">
-                <button><ion-icon name="add-outline"></ion-icon>Adicionar Estufa</button>
-            </div>
-        </section>
-
-        <section class="card_box">
-            <button class="adicionar_estufa">
+        <section class="greenhouse-grid">
+            <button class="add-greenhouse">
                 <ion-icon name="add-outline"></ion-icon>
+                <span>Adicionar Estufa</span>
             </button>
-            <div class="card">
 
-            </div>
-            <div class="card">
+            <div class="greenhouse-card">
+                <div class="card-header">
+                    <h3>Tomates</h3>
+                    <span class="status online">
+                        Online
+                    </span>
+                </div>
 
+                <div class="card-content">
+                    <div class="info">
+                        <p>Temperatura</p>
+                        <strong>24°C</strong>
+                    </div>
+
+                    <div class="info">
+                        <p>Umidade</p>
+                        <strong>72%</strong>
+                    </div>
+                </div>
             </div>
+
+            <div class="greenhouse-card">
+                <div class="card-header">
+                    <h3>Alface</h3>
+                    <span class="status warning">
+                        Atenção
+                    </span>
+                </div>
+                <div class="card-content">
+                    <div class="info">
+                        <p>Temperatura</p>
+                        <strong>31°C</strong>
+                    </div>
+
+                    <div class="info">
+                        <p>Umidade</p>
+                        <strong>40%</strong>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
 
-    <script type="module"src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

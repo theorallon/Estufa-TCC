@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 :root{
     --bg-primary: #0B0F0C;
     --bg-secondary: #111714;
@@ -17,6 +16,7 @@
     --terciary-green: #5d961c;
     --text-primary: #F3F4F6;
     --text-secondary: #A1A1AA;
+    --warning: #FFC857;
     --glass-bg: rgba(255,255,255,0.04);
     --green-glow:
         0 0 20px rgba(158,255,0,0.15);
@@ -64,10 +64,10 @@ body{
 }
 
 .logo span{
+    display: block;
+    margin-top: 6px;
     color: var(--text-secondary);
     font-size: 14px;
-    margin-top: 6px;
-    display: block;
 }
 
 .menu{
@@ -84,23 +84,24 @@ body{
     border-radius: 14px;
     text-decoration: none;
     color: var(--text-secondary);
-    transition: 0.3s ease;
+
+    transition: 0.3s;
+}
+
+.menu-item ion-icon{
+    font-size: 22px;
 }
 
 .menu-item:hover{
-    background: rgba(67, 109, 0, 0.075);
+    background: rgba(158,255,0,0.08);
     color: var(--primary-green);
-    box-shadow: var(--border-color);
+    box-shadow: var(--green-glow);
 }
 
 .menu-item.active{
     background: rgba(158,255,0,0.12);
     color: var(--primary-green);
     border: 1px solid rgba(158,255,0,0.15);
-}
-
-.menu-item ion-icon{
-    font-size: 22px;
 }
 
 .main-content{
@@ -111,7 +112,7 @@ body{
 }
 
 .topbar{
-    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,8 +122,23 @@ body{
     backdrop-filter: blur(10px);
 }
 
+.page-info h2{
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.page-info p{
+    color: var(--text-secondary);
+}
+
+.topbar-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .search-box{
-    width: 350px;
+    width: 320px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -146,25 +162,23 @@ body{
     font-size: 15px;
 }
 
-.topbar-right{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .notification-button{
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 14px;
-    cursor: pointer;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+}
+
+.notification-button ion-icon{
+    font-size: 22px;
 }
 
 .notification-button:hover{
@@ -183,7 +197,7 @@ body{
 }
 
 .profile ion-icon{
-    font-size: 38px;
+    font-size: 40px;
     color: var(--primary-green);
 }
 
@@ -193,110 +207,131 @@ body{
 }
 
 .profile span{
-    font-size: 13px;
     color: var(--text-secondary);
+    font-size: 13px;
 }
 
-.menu_card{
+.greenhouse-grid{
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
     padding: 32px;
 }
 
-.menu_card .card{
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+.add-greenhouse{
+    min-height: 230px;
+    border: 2px dashed var(--border-color);
     border-radius: 24px;
-    padding: 32px;
-    box-shadow: var(--shadow-soft);
-}
-
-.menu_card .card h2{
-    margin-bottom: 12px;
-    font-size: 28px;
-}
-
-.menu_card .card button{
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
     display: flex;
-    background-color: var(--terciary-green);
-    border: none;
-    color: var(--text-primary);
-    padding: 10px;
-    border-radius: 5px;
+    flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+    gap: 16px;
+    transition: 0.3s;
 }
 
-.menu_card .card button ion-icon{
-    font-size: 22px;
+.add-greenhouse ion-icon{
+    font-size: 52px;
+    color: var(--primary-green);
 }
 
-.menu_card .card button:hover{
-    
+.add-greenhouse span{
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.card_box{
+.add-greenhouse:hover{
+    border-color: var(--primary-green);
+    background: rgba(158,255,0,0.05);
+    box-shadow: var(--green-glow);
+    transform: translateY(-4px);
+}
+
+.greenhouse-card{
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s;
+}
+
+.greenhouse-card:hover{
+    transform: translateY(-5px);
+    border-color: rgba(158,255,0,0.15);
+    box-shadow:
+        0 0 20px rgba(158,255,0,0.08);
+}
+
+.card-header{
     display: flex;
-    padding: 32px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
-.card_box .adicionar_estufa{
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 32px;
-    box-shadow: var(--shadow-soft);
+.status{
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.card_box .card{
-    margin-left: ;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 32px;
-    box-shadow: var(--shadow-soft);
+.status.online{
+    background: rgba(0,255,120,0.1);
+    color: #4dff88;
+}
+
+.status.warning{
+    background: rgba(255,200,87,0.12);
+    color: var(--warning);
+}
+
+.card-content{
+    display: flex;
+    gap: 32px;
+}
+
+.info p{
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.info strong{
+    font-size: 24px;
 }
 
 @media(max-width: 900px){
     .sidebar{
         width: 90px;
     }
-
     .logo span,
     .menu-item span{
-
         display: none;
     }
-
     .main-content{
-
         margin-left: 90px;
     }
-
     .search-box{
-
         width: 220px;
     }
 }
 
 @media(max-width: 700px){
-
     .topbar{
-
         flex-direction: column;
-
-        gap: 20px;
-
         align-items: flex-start;
+        gap: 20px;
     }
-
-    .search-box{
-
-        width: 100%;
-    }
-
     .topbar-right{
-
         width: 100%;
-
         justify-content: space-between;
+    }
+    .search-box{
+        width: 100%;
     }
 }
