@@ -87,9 +87,9 @@ body{
 }
 
 .menu-item:hover{
-    background: rgba(158,255,0,0.08);
+    background: rgba(67, 109, 0, 0.075);
     color: var(--primary-green);
-    box-shadow: var(--green-glow);
+    box-shadow: var(--border-color);
 }
 
 .menu-item.active{
