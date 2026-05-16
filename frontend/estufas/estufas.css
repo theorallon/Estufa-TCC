@@ -14,6 +14,7 @@
     --border-color: #1F2A23;
     --primary-green: #9EFF00;
     --secondary-green: #5FBF3A;
+    --terciary-green: #5d961c;
     --text-primary: #F3F4F6;
     --text-secondary: #A1A1AA;
     --glass-bg: rgba(255,255,255,0.04);
@@ -196,11 +197,11 @@ body{
     color: var(--text-secondary);
 }
 
-.dashboard{
+.menu_card{
     padding: 32px;
 }
 
-.welcome-card{
+.menu_card .card{
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 24px;
@@ -208,14 +209,50 @@ body{
     box-shadow: var(--shadow-soft);
 }
 
-.welcome-card h2{
+.menu_card .card h2{
     margin-bottom: 12px;
     font-size: 28px;
 }
 
-.welcome-card p{
-    color: var(--text-secondary);
-    line-height: 1.6;
+.menu_card .card button{
+    display: flex;
+    background-color: var(--terciary-green);
+    border: none;
+    color: var(--text-primary);
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+
+}
+
+.menu_card .card button ion-icon{
+    font-size: 22px;
+}
+
+.menu_card .card button:hover{
+    
+}
+
+.card_box{
+    display: flex;
+    padding: 32px;
+}
+
+.card_box .adicionar_estufa{
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow-soft);
+}
+
+.card_box .card{
+    margin-left: ;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow-soft);
 }
 
 @media(max-width: 900px){
