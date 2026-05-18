@@ -225,41 +225,31 @@ body{
 
     .logo span,
     .menu-item span{
-
         display: none;
     }
 
     .main-content{
-
         margin-left: 90px;
     }
 
     .search-box{
-
         width: 220px;
     }
 }
 
 @media(max-width: 700px){
-
     .topbar{
-
         flex-direction: column;
-
         gap: 20px;
-
         align-items: flex-start;
     }
 
     .search-box{
-
         width: 100%;
     }
 
     .topbar-right{
-
         width: 100%;
-
         justify-content: space-between;
     }
 }
